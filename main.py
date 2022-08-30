@@ -6,6 +6,7 @@ import notify
 from datetime import datetime
 import pytz
 import os
+import sys
 
 ltuid = os.environ.get("ltuid")
 ltoken = os.environ.get("ltoken")
@@ -63,6 +64,7 @@ async def main():
             desp += str(desp_add)
             continue
     await notify.discord(desp, num_of_account)
+    sys.stdout.flush()
     
 
 if __name__ == "__main__":
