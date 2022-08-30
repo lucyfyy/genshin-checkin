@@ -4,7 +4,7 @@ import os
 
 async def discord(desp, x):
     discord_url = os.environ.get("discord")
-    webhook = DiscordWebhook(url=discord_url)
+    webhook = DiscordWebhook(url=str(discord_url))
     title = f"""
     Genshin Daily Sign-In 
     -Number of successful sign-ins: {x}
