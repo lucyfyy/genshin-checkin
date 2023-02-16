@@ -2,6 +2,7 @@ import genshin
 
 async def daily(client):
     try:
+        # Claiming Daily Reward
         reward = await client.claim_daily_reward()
     except genshin.AlreadyClaimed:
         reward = await client.claimed_rewards()
