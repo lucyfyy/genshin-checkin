@@ -16,7 +16,6 @@ async def discord(desp, x):
     webhook.add_embed(embed)
     response = webhook.execute()
     if (response.status_code == 200):
-        print(f'Discord Message SUCCESS.')
+        print(f'Discord Message SUCCESS')
     else:
-        # print failed message
-        print(f'Discord Message FAILED\n{response}.')
+        print(f'Discord Message FAILED\n{response}')
